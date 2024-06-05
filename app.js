@@ -73,7 +73,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             round++;
             if (round === 9) {
-                alert("Ничья");
+                winnerSpan.innerHTML = "-";
+                winnerNotify.showModal();
             }
         });
     });
