@@ -46,13 +46,6 @@ h6 {
     transition-timing-function: ease-in-out;
 }
 
-.btn:hover {
-    background-color: white;
-    color: black;
-    box-shadow: white 0 0 10px;
-    border-color: white;
-}
-
 .puzzle td {
     width: 8rem;
     height: 8rem;
@@ -68,10 +61,6 @@ h6 {
     transition-timing-function: linear;
 }
 
-.puzzle td:empty:hover {
-    background-color: white;
-    color: black
-}
 
 #winner {
     font-size: 4rem;
@@ -103,6 +92,39 @@ h6 {
 
 #winner-notify::backdrop {
     background-color: black;
+}
+
+@media (hover: hover) {
+    .puzzle td:empty:hover {
+        background-color: white;
+        color: black
+    }
+
+    .btn:hover {
+        background-color: white;
+        color: black;
+        box-shadow: white 0 0 10px;
+
+    }
+
+}
+
+@media (hover: none) {
+    .puzzle td {
+        transition-duration: 100ms;
+    }
+
+    .puzzle td:empty:active {
+        background-color: white;
+        color: black
+    }
+
+    .btn:active {
+        background-color: white;
+        color: black;
+        box-shadow: white 0 0 10px;
+
+    }
 }
 
 @media (max-width:640px) {
